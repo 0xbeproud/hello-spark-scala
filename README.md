@@ -1,3 +1,10 @@
-Interactive Analysis with the Spark Shell
-Basics
-Spark’s shell provides a simple way to learn the API, as well as a powerful tool to analyze data interactively. It is available in either Scala (which runs on the Java VM and is thus a good way to use existing Java libraries) or Python. Start it by running the following in the Spark directory:
+# Spark Scala
+
+### Run
+
+- Add dependencies with "provided" scope to classpath 설정 필요
+- Program Argument 설정(local) 필요
+- docker compose up으로 MySQL 실행
+
+![Run](docs/images/Run.png)
+
