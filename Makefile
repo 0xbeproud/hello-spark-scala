@@ -1,4 +1,4 @@
-s3_data_lake = s3://krosslab-prod-lake
+s3_data_lake = s3://data-lake
 path = empty
 
 download:
