@@ -1,4 +1,4 @@
-package com.beproud.repository
+package com.beproud.domain
 
 import java.sql.PreparedStatement
 import scala.collection.mutable.ArrayBuffer

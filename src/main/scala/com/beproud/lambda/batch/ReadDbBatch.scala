@@ -2,12 +2,12 @@ package com.beproud.lambda.batch
 
 import com.beproud.config.Configs
 import com.beproud.dsl.db.withDB
-import com.beproud.helper.SparkSessionWrapper
+import com.beproud.helper.SparkHelper
 
 import scala.collection.mutable
 
 case class User(walletAddress: String, nickname: String, isActive: Boolean)
-object ReadDbBatch extends SparkSessionWrapper {
+object ReadDbBatch extends SparkHelper {
   override def run(args: Array[String]): Unit = {
     println("ReadDbBatch")
 

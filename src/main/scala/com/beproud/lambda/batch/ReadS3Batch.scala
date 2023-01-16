@@ -1,9 +1,9 @@
 package com.beproud.lambda.batch
 
 import com.beproud.config.Configs
-import com.beproud.helper.SparkSessionWrapper
+import com.beproud.helper.SparkHelper
 
-object ReadS3Batch extends SparkSessionWrapper {
+object ReadS3Batch extends SparkHelper {
   override def run(args: Array[String]): Unit = {
     println("ReadS3Batch")
 

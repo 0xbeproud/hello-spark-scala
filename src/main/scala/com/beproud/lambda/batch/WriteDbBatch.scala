@@ -1,15 +1,15 @@
 package com.beproud.lambda.batch
 
 import com.beproud.config.Configs
+import com.beproud.domain.user.{ServingUser, ServingUserRepository}
 import com.beproud.dsl.db.withDB
-import com.beproud.helper.SparkSessionWrapper
+import com.beproud.helper.SparkHelper
 import com.beproud.lambda.batch.ReadS3Batch.spark
-import com.beproud.lambda.serving.domain.user.{ServingUser, ServingUserRepository}
 import org.apache.hadoop.shaded.org.jline.keymap.KeyMap.display
 
 import scala.collection.mutable
 
-object WriteDbBatch extends SparkSessionWrapper {
+object WriteDbBatch extends SparkHelper {
   override def run(args: Array[String]): Unit = {
     println("WriteDbBatch")
 

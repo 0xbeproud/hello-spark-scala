@@ -4,10 +4,13 @@ import com.beproud.config.Configs
 import com.beproud.lambda.batch.ReadDbBatch.spark
 import com.typesafe.config.{Config, ConfigFactory}
 import org.apache.log4j.{Level, Logger}
-import org.apache.spark.SparkConf
+import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.SparkSession
+import org.joda.time.DateTimeZone
 
-trait SparkSessionWrapper {
+import java.util.TimeZone
+
+trait SparkHelper {
   lazy val appName: String = this.getClass.getName.stripSuffix("$")
 
   lazy implicit val spark: SparkSession = {
@@ -40,6 +43,20 @@ trait SparkSessionWrapper {
     } else {
       SparkSession.builder().master(master).config(sparkConf).getOrCreate()
     }
+  }
+  lazy val sc: SparkContext = {
+    val sc = spark.sparkContext
+
+//    if (UserConfig.s3AccessKey.isSuccess && UserConfig.s3SecretKey.isSuccess) {
+//      sc.hadoopConfiguration.set("fs.s3a.access.key", UserConfig.s3AccessKey.get)
+//      sc.hadoopConfiguration.set("fs.s3a.secret.key", UserConfig.s3SecretKey.get)
+//    }
+
+    DateTimeZone.setDefault(DateTimeZone.UTC)
+    TimeZone.setDefault(TimeZone.getTimeZone("UTC"))
+
+    sc.setLogLevel("WARN")
+    sc
   }
 
   def run(args: Array[String]): Unit

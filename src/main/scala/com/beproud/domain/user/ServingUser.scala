@@ -1,4 +1,4 @@
-package com.beproud.lambda.serving.domain.user
+package com.beproud.domain.user
 
 case class ServingUser(
                         walletAddress: String,

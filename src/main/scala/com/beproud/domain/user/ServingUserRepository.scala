@@ -1,7 +1,7 @@
-package com.beproud.lambda.serving.domain.user
+package com.beproud.domain.user
 
+import com.beproud.domain.AbstractRepository
 import com.beproud.dsl.db.withDB
-import com.beproud.repository.AbstractRepository
 
 class ServingUserRepository extends AbstractRepository {
 
