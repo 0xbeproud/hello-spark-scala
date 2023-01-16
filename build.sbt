@@ -1,6 +1,7 @@
 lazy val root = (project in file("."))
   .settings(
     name := "spark-scala",
+    libraryDependencies ++= Dependencies.spark,
     libraryDependencies ++= Dependencies.sparkProvided,
     libraryDependencies ++= Dependencies.jackson,
     libraryDependencies ++= Dependencies.test,

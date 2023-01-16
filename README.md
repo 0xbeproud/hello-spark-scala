@@ -12,3 +12,13 @@ https://www.databricks.com/glossary/lambda-architecture
 
 ![Run](docs/images/Run.png)
 
+
+## Docker
+
+create topic
+
+docker-compose exec kafka kafka-topics --create --topic sample-topic --bootstrap-server kafka:9092 --replication-factor 1 --partitions 1
+docker-compose exec kafka kafka-topics --describe --topic sample-topic --bootstrap-server kafka:9092
+
+betheproud@betheproud-MS-7C94:~/superdesire/spark-scala$ docker-compose exec kafka bash
+[appuser@e6233be12595 ~]$ kafka-console-consumer --topic sample-topic --bootstrap-server kafka:9092

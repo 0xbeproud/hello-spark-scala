@@ -4,21 +4,23 @@ import sbt._
 object Dependencies {
 
   val spark = Seq(
-    "org.apache.spark" %% "spark-yarn"      % Versions.spark,
-    "org.apache.spark" %% "spark-core"      % Versions.spark,
-    "org.apache.spark" %% "spark-sql"       % Versions.spark,
-    "org.apache.spark" %% "spark-mllib"     % Versions.spark,
-    "org.apache.spark" %% "spark-streaming" % Versions.spark,
-    "org.apache.spark" %% "spark-hive"      % Versions.spark
+    "org.apache.spark" %% "spark-yarn"                  % Versions.spark,
+    "org.apache.spark" %% "spark-core"                  % Versions.spark,
+    "org.apache.spark" %% "spark-sql"                   % Versions.spark,
+    "org.apache.spark" %% "spark-sql-kafka-0-10"        % Versions.spark,
+    "org.apache.spark" %% "spark-mllib"                 % Versions.spark,
+    "org.apache.spark" %% "spark-streaming"             % Versions.spark,
+    "org.apache.spark" %% "spark-streaming-kafka-0-10"  % Versions.spark,
+    "org.apache.spark" %% "spark-hive"                  % Versions.spark
   )
 
   val sparkProvided = Seq(
-    "org.apache.spark" %% "spark-yarn"      % Versions.spark % Provided,
-    "org.apache.spark" %% "spark-core"      % Versions.spark % Provided,
-    "org.apache.spark" %% "spark-sql"       % Versions.spark % Provided,
-    "org.apache.spark" %% "spark-mllib"     % Versions.spark % Provided,
-    "org.apache.spark" %% "spark-streaming" % Versions.spark % Provided,
-    "org.apache.spark" %% "spark-hive"      % Versions.spark % Provided
+    "org.apache.spark" %% "spark-yarn"                  % Versions.spark % Provided,
+    "org.apache.spark" %% "spark-core"                  % Versions.spark % Provided,
+    "org.apache.spark" %% "spark-sql"                   % Versions.spark % Provided,
+    "org.apache.spark" %% "spark-mllib"                 % Versions.spark % Provided,
+    "org.apache.spark" %% "spark-streaming"             % Versions.spark % Provided,
+    "org.apache.spark" %% "spark-hive"                  % Versions.spark % Provided
   )
 
   val jackson = Seq(

@@ -1,7 +1,7 @@
 object Versions {
 
   val scala     = "2.12.10"
-  val spark     = "3.2.1"
+  val spark     = "3.3.1"
   val hadoopAWS = "3.2.1"
   val awsSDK    = "1.12.282"
 

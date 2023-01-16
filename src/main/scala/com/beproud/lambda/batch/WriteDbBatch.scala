@@ -5,7 +5,6 @@ import com.beproud.domain.user.{ServingUser, ServingUserRepository}
 import com.beproud.dsl.db.withDB
 import com.beproud.helper.SparkHelper
 import com.beproud.lambda.batch.ReadS3Batch.spark
-import org.apache.hadoop.shaded.org.jline.keymap.KeyMap.display
 
 import scala.collection.mutable
 
